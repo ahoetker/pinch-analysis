@@ -207,3 +207,4 @@ dmypy.json
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode,python,pycharm
+.vscode/settings.json
