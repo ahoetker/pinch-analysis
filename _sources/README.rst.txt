@@ -19,15 +19,18 @@ In this stage of development, the only target is a run script. Run
 Testing
 -------
 
-No unit tests are currently written.
+Unit tests are provided in the ``tests`` directory. Running tests
+requires the ``pytest`` package.
 
 Authors
 -------
 
-============== ================ ============
-Name           Contact          Github
-============== ================ ============
-Andrew Hoetker ahoetker@asu.edu ahoetker
-Emma Holle     eholle@asu.edu   eholle123
-James Taylor   jetayl14@asu.edu notthesinger
-============== ================ ============
++----------------+------------------+--------------+
+| Name           | Contact          | Github       |
++================+==================+==============+
+| Andrew Hoetker | ahoetker@asu.edu | ahoetker     |
++----------------+------------------+--------------+
+| Emma Holle     | eholle@asu.edu   | eholle123    |
++----------------+------------------+--------------+
+| James Taylor   | jetayl14@asu.edu | notthesinger |
++----------------+------------------+--------------+

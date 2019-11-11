@@ -1,5 +1,5 @@
 plots
 =====
 
-.. automodule:: plots
+.. automodule:: pinch.plots
     :members:
