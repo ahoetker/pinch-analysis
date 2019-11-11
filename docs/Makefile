@@ -28,6 +28,11 @@ latexpdf:
 	cp $(PDFBUILDDIR)/latex/*.pdf $(PDF)
 	@echo "pdflatex finished; see $(PDF)"
 
-buildandcommithtml: html latexpdf
+
+convertreadme:
+	pandoc -s ../README.md -o $(SOURCEDIR)/README.rst
+	@echo "Generating $(SOURCEDIR)/README.rst from README.md"
+
+buildandcommithtml: convertreadme html latexpdf
 
 	cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
