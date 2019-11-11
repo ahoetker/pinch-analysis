@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>plots &mdash; Pinch Analysis 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pinch-analysis" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pinch Analysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">pinch-analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">plots</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pinch Analysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>plots</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plots.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-plots">
+<span id="plots"></span><h1>plots<a class="headerlink" href="#module-plots" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="plots.cold_composite">
+<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">cold_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.cold_composite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cold composite curve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enth</strong> – array of enthalpy values</p></li>
+<li><p><strong>temp</strong> – array of cold temperatures</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plots.combined_composite">
+<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">combined_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp_cold: numpy.array</em>, <em class="sig-param">temp_hot: numpy.array</em>, <em class="sig-param">dtmin: numpy.float64</em>, <em class="sig-param">pinch_temp: numpy.float64</em>, <em class="sig-param">min_cooling: numpy.float64</em>, <em class="sig-param">min_heating: numpy.float64</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.combined_composite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combined composite curve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enth</strong> – array of enthalpy values</p></li>
+<li><p><strong>temp_cold</strong> – array of cold temperatures</p></li>
+<li><p><strong>temp_hot</strong> – array of hot temperatures</p></li>
+<li><p><strong>dtmin</strong> – minimum allowable temperature difference</p></li>
+<li><p><strong>pinch_temp</strong> – temperature at the pinch</p></li>
+<li><p><strong>min_cooling</strong> – minimum allowable cooling heat flux</p></li>
+<li><p><strong>min_heating</strong> – minimum allowable heating heat flux</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plots.grand_composite">
+<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">grand_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.grand_composite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grand composite curve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enth</strong> – array of enthalpy values</p></li>
+<li><p><strong>temp</strong> – array of temperatures</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plots.hot_composite">
+<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">hot_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.hot_composite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hot composite curve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enth</strong> – array of enthalpy values</p></li>
+<li><p><strong>temp</strong> – array of hot temperatures</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plots.stream_matching">
+<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">stream_matching</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.stream_matching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steam matching diagram
+I am still unsure how to create this diagram, so this is a pure stub with no parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="README.html" class="btn btn-neutral float-left" title="pinch-analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Andrew Hoetker, Emma Holle, James Taylor
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

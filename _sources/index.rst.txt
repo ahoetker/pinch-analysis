@@ -10,7 +10,10 @@ Welcome to Pinch Analysis's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   README
+   plots
 
+.. include:: README.rst
 
 Indices and tables
 ==================
@@ -18,6 +21,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. automodule:: plots
-   :members:
