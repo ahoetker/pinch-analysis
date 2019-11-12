@@ -1,5 +1,5 @@
 # pinch-analysis
-[![Build Status](https://travis-ci.com/ahoetker/pinch-analysis.svg?branch=master)](https://travis-ci.org/ahoetker/matlabreport)
+[![Build Status](https://travis-ci.com/ahoetker/pinch-analysis.svg?branch=master)](https://travis-ci.com/ahoetker/pinch-analysis)
 
 Pinch-point technique for heat integration analysis in chemical plants.
 
