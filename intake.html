@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>intake &mdash; Pinch Analysis 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="plots" href="plots.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pinch Analysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plots.html">plots</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">intake</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pinch Analysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>intake</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intake.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pinch.intake">
+<span id="intake"></span><h1>intake<a class="headerlink" href="#module-pinch.intake" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pinch.intake.attach_units">
+<code class="sig-prename descclassname">pinch.intake.</code><code class="sig-name descname">attach_units</code><span class="sig-paren">(</span><em class="sig-param">column: pandas.core.series.Series</em>, <em class="sig-param">units: pint.quantity.build_quantity_class.&lt;locals&gt;.Quantity</em><span class="sig-paren">)</span> &#x2192; numpy.array<a class="headerlink" href="#pinch.intake.attach_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach units to a DataFrame column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>column</strong> – DataFrame column or Series to have units attached.</p></li>
+<li><p><strong>units</strong> – pint Quantity to be attached.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Numpy array wrapped with the correct Quantity.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pinch.intake.df_with_units">
+<code class="sig-prename descclassname">pinch.intake.</code><code class="sig-name descname">df_with_units</code><span class="sig-paren">(</span><em class="sig-param">filepath: pathlib.Path</em>, <em class="sig-param">unit_system: str</em>, <em class="sig-param">sheet_name: str = None</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#pinch.intake.df_with_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take in a file containing the product design table, and produce a DataFrame with
+the correct units applied to relevant columns. The output DataFrame will contain only scalars, and is
+not labeled with units. This is because it has already been converted to the output unit system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> – Path to data file to be read.</p></li>
+<li><p><strong>sheet_name</strong> – optional sheet name for multiple-sheet Excel workbooks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame containing table data with units attached</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pinch.intake.map_input_method">
+<code class="sig-prename descclassname">pinch.intake.</code><code class="sig-name descname">map_input_method</code><span class="sig-paren">(</span><em class="sig-param">filepath: pathlib.Path</em><span class="sig-paren">)</span> &#x2192; Optional[Callable]<a class="headerlink" href="#pinch.intake.map_input_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine which pandas method should be used to create a DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filepath</strong> – path to data file to be read.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pandas method suitable for data intake.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pinch.intake.parse_column_units">
+<code class="sig-prename descclassname">pinch.intake.</code><code class="sig-name descname">parse_column_units</code><span class="sig-paren">(</span><em class="sig-param">filepath: pathlib.Path</em>, <em class="sig-param">sheet_name: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, pint.quantity.build_quantity_class.&lt;locals&gt;.Quantity]<a class="headerlink" href="#pinch.intake.parse_column_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse units for each column containing physical data in the data file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> – Path to data file to be read.</p></li>
+<li><p><strong>sheet_name</strong> – optional sheet name for multiple-sheet Excel workbooks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of units for each input column</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="plots.html" class="btn btn-neutral float-left" title="plots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Andrew Hoetker, Emma Holle, James Taylor
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

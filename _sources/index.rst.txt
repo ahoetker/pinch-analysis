@@ -6,14 +6,16 @@
 Welcome to Pinch Analysis's documentation!
 ==========================================
 
+.. include:: README.rst
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   README
    plots
+   intake
 
-.. include:: README.rst
+
 
 Indices and tables
 ==================
