@@ -1,7 +1,12 @@
 import pytest
 import numpy as np
 from pinch import ureg, Q_
-from pinch.plots import (cold_composite, combined_composite, grand_composite, hot_composite)
+from pinch.plots import (
+    cold_composite,
+    combined_composite,
+    grand_composite,
+    hot_composite,
+)
 
 
 def test_cold_composite():
@@ -11,8 +16,25 @@ def test_cold_composite():
 
 
 def test_grand_composite():
-    temp = Q_(np.array([40.30, 45.00, 52.10, 116.70, 159.20, 206.10, 240.00, 250.00]), "celsius")
-    enth = Q_(np.array([187479.504, 191117.304, 1.640166e5, 5.627682e4, 18443.376, 512.568, 0, 15516.0]), "MJ")
+    temp = Q_(
+        np.array([40.30, 45.00, 52.10, 116.70, 159.20, 206.10, 240.00, 250.00]),
+        "celsius",
+    )
+    enth = Q_(
+        np.array(
+            [
+                187479.504,
+                191117.304,
+                1.640166e5,
+                5.627682e4,
+                18443.376,
+                512.568,
+                0,
+                15516.0,
+            ]
+        ),
+        "MJ",
+    )
     grand_composite(enth, temp, show=True)
 
 
