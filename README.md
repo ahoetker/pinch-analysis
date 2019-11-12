@@ -1,9 +1,17 @@
 # pinch-analysis
+[![Build Status](https://travis-ci.com/ahoetker/pinch-analysis.svg?branch=master)](https://travis-ci.org/ahoetker/matlabreport)
+
 Pinch-point technique for heat integration analysis in chemical plants.
 
 ## Getting Started
 
-No package is provided. No docker image is provided. Simply clone https://github.com/ahoetker/pinch-analysis.git, and run `pip install -r requirements.txt` to create the Python environment.
+The package `pinch-analysis` is defined by `setup.py`. To install, clone this repository, and run the following installation
+commands:
+
+```
+pip install -r requirements.txt
+pip install -e .
+```
 
 ## Usage
 
