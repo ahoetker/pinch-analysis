@@ -1,9 +1,9 @@
-Stream,#,Supply Temperature,Target Temperature,Heat Capacity Flowrate,Enthalpy
+Stream,#,Supply Temperature,Target Temperature,Heat Capacity Flowrate,Heat Flow
 ,,degC,degC,kW/K,MJ/hour
-Compressor 1 out,3,159.2,45,101.2,41605.3
-Compressor 2 out,5,206.1,45,102,59155.9
+Compressor 1 out,3,159.2,45,101.2,41605.344
+Compressor 2 out,5,206.1,45,102,59155.92
 Reactor 1 out,12,240,45,219.5,154089
 Reactor 2 out,20,240,45,215.7,151421.4
-Mixed absorber effluent,29,52.1,45,597,15259.3
-Cold reactor 1 feed,10,106.7,240,216,-103654.1
+Mixed absorber effluent,29,52.1,45,597,15259.32
+Cold reactor 1 feed,10,106.7,240,216,-103654.08
 Cold reactor 2 feed,16,30.3,240,215,-162307.8

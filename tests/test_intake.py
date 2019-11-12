@@ -16,7 +16,6 @@ def test_parse_column_units():
         "Supply Temperature": ureg.celsius,
         "Target Temperature": ureg.celsius,
         "Heat Capacity Flowrate": ureg.kW / ureg.K,
-        "Enthalpy": ureg.MJ / ureg.hour,
     }
     assert parse_column_units(csv) == correct_units
     assert parse_column_units(xlsx) == correct_units
@@ -38,9 +37,7 @@ def test_df_with_units():
     xlsx_imperial = df_with_units(xlsx, "Imperial")
 
     assert np.isclose(csv_mks["Supply Temperature"]["Compressor 1 out"], 159.2)
-    assert np.isclose(csv_mks["Enthalpy"]["Compressor 1 out"], 41605.3)
     assert np.isclose(xlsx_si["Supply Temperature"]["Compressor 1 out"], 159.2)
     assert np.isclose(xlsx_si["Heat Capacity Flowrate"]["Compressor 1 out"], 101.2)
 
     assert np.isclose(csv_english["Supply Temperature"]["Compressor 1 out"], 318.56)
-    assert np.isclose(xlsx_imperial["Enthalpy"]["Compressor 1 out"], 39434215.63577166)

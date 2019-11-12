@@ -1,0 +1,99 @@
+\documentclass[12pt, letterpaper]{article}
+
+% Set document data
+\author{pinch-analyis package}
+\title{Pinch Point Analysis}
+
+% Math environments
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Chemical formulas
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+
+% SI units and friends
+\usepackage{siunitx}
+\DeclareSIUnit\Fahrenheit{\degree~F}
+\DeclareSIUnit\degF{\degree F}
+\DeclareSIUnit\degC{\degree C}
+\DeclareSIUnit\pound{lb}
+\DeclareSIUnit\poundmass{lb\textsubscript{m}}
+\DeclareSIUnit\foot{ft}
+\DeclareSIUnit\atm{atm}
+\DeclareSIUnit\poise{P}
+\DeclareSIUnit\year{year}
+\DeclareSIUnit\btu{btu}
+
+% Page layout
+\usepackage[margin=1in,paper=letterpaper]{geometry}
+
+% Fonts
+\usepackage{stix}
+
+% Fancy linked references
+\usepackage{varioref}
+
+% Hyperlinks
+% These will turn internal cross-references, in-text citations,
+% and headings into clickable links in the PDF. The link text
+% will still be black.
+\usepackage{color}
+\usepackage[%
+	pdfborder=0,
+	colorlinks=true,
+	urlcolor=black,
+	linkcolor=black,
+	citecolor=black]{hyperref}
+
+% Figures and captions
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[margin=1cm]{caption}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Tables}
+
+\subsection{Problem Design Table}
+
+\begin{table}[h!btp]
+	\centering
+	\caption{Problem Design Table}
+	\input{\VAR{contents.get("tables").get("problem design table")}}
+\end{table}
+
+\section{plots}
+
+\subsection{Composite Plots}
+
+\begin{figure}[h!btp]
+	\centering
+	\caption{Cold Composite Plot}
+	\input{\VAR{contents.get("plots").get("cold composite")}}
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\caption{Combined Composite Plot}
+	\input{\VAR{contents.get("plots").get("combined composite")}}
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\caption{Grand Composite Plot}
+	\input{\VAR{contents.get("plots").get("grand composite")}}
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\caption{Hot Composite Plot}
+	\input{\VAR{contents.get("plots").get("hot composite")}}
+\end{figure}
+
+
+\end{document}

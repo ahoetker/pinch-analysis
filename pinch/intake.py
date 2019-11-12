@@ -38,7 +38,6 @@ def parse_column_units(
         "Supply Temperature",
         "Target Temperature",
         "Heat Capacity Flowrate",
-        "Enthalpy",
     ]
 
     for column in required_columns:

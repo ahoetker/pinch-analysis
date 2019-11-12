@@ -1,5 +1,5 @@
-plots
-=====
+Plots module
+============
 
 .. automodule:: pinch.plots
     :members:

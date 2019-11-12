@@ -12,10 +12,18 @@ Welcome to Pinch Analysis's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   plots
+
+Modules
+=======
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Modules:
+
+   analysis
    intake
-
-
+   plots
+   report
 
 Indices and tables
 ==================

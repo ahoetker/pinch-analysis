@@ -6,15 +6,36 @@ Pinch-point technique for heat integration analysis in chemical plants.
 Getting Started
 ---------------
 
-No package is provided. No docker image is provided. Simply clone
-https://github.com/ahoetker/pinch-analysis.git, and run
-``pip install -r requirements.txt`` to create the Python environment.
+The package ``pinch-analysis`` is defined by ``setup.py``. To install,
+clone this repository, and run the following installation commands:
+
+::
+
+   pip install -r requirements.txt
+   pip install -e .
 
 Usage
 -----
 
-In this stage of development, the only target is a run script. Run
-``python main.py``.
+After installation, the package provided the ``pinch-analysis`` command:
+
+::
+
+   Usage: pinch-analysis [OPTIONS] DATAFILE REPORTFILE [OUTPUTDIR]
+
+     Run script for `pinch-analysis`.
+
+   Options:
+     --unitsystem TEXT  Unit system used in tables and graphs.
+     -a                 Save all generated tables and figures to disk.
+     --help             Show this message and exit.
+
+For example, the following command will parse data from `design_table.xlsx`, format the output in English units,
+and save both the report and all included figures and tables to the `report` folder.
+
+::
+
+    pinch-analysis -a --unitsystem english design_table.xlsx report.pdf report/
 
 Input Data Format
 ~~~~~~~~~~~~~~~~~
@@ -25,36 +46,18 @@ below. The units given in the second row can be written in any way such
 that `Pint <https://pint.readthedocs.io/en/latest/pint-pandas.html>`__
 is able to parse them to valid quantities.
 
-+---------------+---+------------+------------+---------------+-------+
-| Stream        | # | Supply     | Target     | Heat Capacity | Entha |
-|               |   | Temperatur | Temperatur | Flowrate      | lpy   |
-|               |   | e          | e          |               |       |
-+===============+===+============+============+===============+=======+
-|               |   | degC       | degC       | kW/K          | MJ/ho |
-|               |   |            |            |               | ur    |
-+---------------+---+------------+------------+---------------+-------+
-| Compressor 1  | 3 | 159.2      | 45         | 101.2         | 41605 |
-| out           |   |            |            |               | .3    |
-+---------------+---+------------+------------+---------------+-------+
-| Compressor 2  | 5 | 206.1      | 45         | 102           | 59155 |
-| out           |   |            |            |               | .9    |
-+---------------+---+------------+------------+---------------+-------+
-| Reactor 1 out | 1 | 240        | 45         | 219.5         | 15408 |
-|               | 2 |            |            |               | 9     |
-+---------------+---+------------+------------+---------------+-------+
-| Reactor 2 out | 2 | 240        | 45         | 215.7         | 15142 |
-|               | 0 |            |            |               | 1.4   |
-+---------------+---+------------+------------+---------------+-------+
-| Mixed         | 2 | 52.1       | 45         | 597           | 15259 |
-| absorber      | 9 |            |            |               | .3    |
-| effluent      |   |            |            |               |       |
-+---------------+---+------------+------------+---------------+-------+
-| Cold reactor  | 1 | 106.7      | 240        | 216           | -1036 |
-| 1 feed        | 0 |            |            |               | 54.1  |
-+---------------+---+------------+------------+---------------+-------+
-| Cold reactor  | 1 | 30.3       | 240        | 215           | -1623 |
-| 2 feed        | 6 |            |            |               | 07.8  |
-+---------------+---+------------+------------+---------------+-------+
+======================= == ================== ================== ======================
+Stream                  #  Supply Temperature Target Temperature Heat Capacity Flowrate
+======================= == ================== ================== ======================
+\                          degC               degC               kW/K
+Compressor 1 out        3  159.2              45                 101.2
+Compressor 2 out        5  206.1              45                 102
+Reactor 1 out           12 240                45                 219.5
+Reactor 2 out           20 240                45                 215.7
+Mixed absorber effluent 29 52.1               45                 597
+Cold reactor 1 feed     10 106.7              240                216
+Cold reactor 2 feed     16 30.3               240                215
+======================= == ================== ================== ======================
 
 Testing
 -------
