@@ -1,14 +1,17 @@
 import pytest
+import pkg_resources
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from pinch import ureg, Q_
 from pinch.intake import parse_column_units, attach_units, df_with_units
 
+resources = Path(pkg_resources.resource_filename("tests", "resources"))
+
 
 def test_parse_column_units():
-    csv = Path("resources/input_table.csv")
-    xlsx = Path("resources/input_table.xlsx")
+    csv = Path(resources / "input_table.csv")
+    xlsx = Path(resources / "input_table.xlsx")
     correct_units = {
         "Supply Temperature": ureg.celsius,
         "Target Temperature": ureg.celsius,
@@ -27,14 +30,12 @@ def test_attach_units():
 
 
 def test_df_with_units():
-    csv = Path("resources/input_table.csv")
-    xlsx = Path("resources/input_table.xlsx")
+    csv = Path(resources / "input_table.csv")
+    xlsx = Path(resources / "input_table.xlsx")
     csv_mks = df_with_units(csv, "mks")
     csv_english = df_with_units(csv, "English")
     xlsx_si = df_with_units(xlsx, "SI")
     xlsx_imperial = df_with_units(xlsx, "Imperial")
-
-    csv_mks.to_csv("csv_mks.csv")
 
     assert np.isclose(csv_mks["Supply Temperature"]["Compressor 1 out"], 159.2)
     assert np.isclose(csv_mks["Enthalpy"]["Compressor 1 out"], 41605.3)
