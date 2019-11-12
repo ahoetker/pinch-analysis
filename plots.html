@@ -35,7 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="pinch-analysis" href="README.html" /> 
+    <link rel="next" title="intake" href="intake.html" />
+    <link rel="prev" title="Welcome to Pinch Analysis’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,8 +82,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="README.html">pinch-analysis</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intake.html">intake</a></li>
 </ul>
 
             
@@ -147,17 +148,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-plots">
-<span id="plots"></span><h1>plots<a class="headerlink" href="#module-plots" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-pinch.plots">
+<span id="plots"></span><h1>plots<a class="headerlink" href="#module-pinch.plots" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="plots.cold_composite">
-<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">cold_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.cold_composite" title="Permalink to this definition">¶</a></dt>
+<dt id="pinch.plots.cold_composite">
+<code class="sig-prename descclassname">pinch.plots.</code><code class="sig-name descname">cold_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em>, <em class="sig-param">show: bool = False</em>, <em class="sig-param">filename: pathlib.Path = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pinch.plots.cold_composite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cold composite curve</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>enth</strong> – array of enthalpy values</p></li>
 <li><p><strong>temp</strong> – array of cold temperatures</p></li>
+<li><p><strong>show</strong> – display the generated plot using <cite>pyplot.show</cite></p></li>
+<li><p><strong>filename</strong> – file destination to save the figure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -167,19 +170,18 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="plots.combined_composite">
-<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">combined_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp_cold: numpy.array</em>, <em class="sig-param">temp_hot: numpy.array</em>, <em class="sig-param">dtmin: numpy.float64</em>, <em class="sig-param">pinch_temp: numpy.float64</em>, <em class="sig-param">min_cooling: numpy.float64</em>, <em class="sig-param">min_heating: numpy.float64</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.combined_composite" title="Permalink to this definition">¶</a></dt>
+<dt id="pinch.plots.combined_composite">
+<code class="sig-prename descclassname">pinch.plots.</code><code class="sig-name descname">combined_composite</code><span class="sig-paren">(</span><em class="sig-param">enth_cold: numpy.array</em>, <em class="sig-param">enth_hot: numpy.array</em>, <em class="sig-param">temp_cold: numpy.array</em>, <em class="sig-param">temp_hot: numpy.array</em>, <em class="sig-param">show: bool = False</em>, <em class="sig-param">filename: pathlib.Path = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pinch.plots.combined_composite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combined composite curve</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>enth</strong> – array of enthalpy values</p></li>
+<li><p><strong>enth_cold</strong> – array of enthalpy values corresponding to cold stream temperatures</p></li>
+<li><p><strong>enth_hot</strong> – array of enthalpy values corresponding to hot stream temperatures</p></li>
 <li><p><strong>temp_cold</strong> – array of cold temperatures</p></li>
 <li><p><strong>temp_hot</strong> – array of hot temperatures</p></li>
-<li><p><strong>dtmin</strong> – minimum allowable temperature difference</p></li>
-<li><p><strong>pinch_temp</strong> – temperature at the pinch</p></li>
-<li><p><strong>min_cooling</strong> – minimum allowable cooling heat flux</p></li>
-<li><p><strong>min_heating</strong> – minimum allowable heating heat flux</p></li>
+<li><p><strong>show</strong> – display the generated plot using <cite>pyplot.show</cite></p></li>
+<li><p><strong>filename</strong> – file destination to save the figure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -189,14 +191,16 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="plots.grand_composite">
-<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">grand_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.grand_composite" title="Permalink to this definition">¶</a></dt>
+<dt id="pinch.plots.grand_composite">
+<code class="sig-prename descclassname">pinch.plots.</code><code class="sig-name descname">grand_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em>, <em class="sig-param">show: bool = False</em>, <em class="sig-param">filename: pathlib.Path = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pinch.plots.grand_composite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grand composite curve</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>enth</strong> – array of enthalpy values</p></li>
 <li><p><strong>temp</strong> – array of temperatures</p></li>
+<li><p><strong>show</strong> – display the generated plot using <cite>pyplot.show</cite></p></li>
+<li><p><strong>filename</strong> – file destination to save the figure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -206,14 +210,16 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="plots.hot_composite">
-<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">hot_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.hot_composite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Hot composite curve</p>
+<dt id="pinch.plots.hot_composite">
+<code class="sig-prename descclassname">pinch.plots.</code><code class="sig-name descname">hot_composite</code><span class="sig-paren">(</span><em class="sig-param">enth: numpy.array</em>, <em class="sig-param">temp: numpy.array</em>, <em class="sig-param">show: bool = False</em>, <em class="sig-param">filename: pathlib.Path = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pinch.plots.hot_composite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cold composite curve</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>enth</strong> – array of enthalpy values</p></li>
 <li><p><strong>temp</strong> – array of hot temperatures</p></li>
+<li><p><strong>show</strong> – display the generated plot using <cite>pyplot.show</cite></p></li>
+<li><p><strong>filename</strong> – file destination to save the figure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -223,8 +229,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="plots.stream_matching">
-<code class="sig-prename descclassname">plots.</code><code class="sig-name descname">stream_matching</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#plots.stream_matching" title="Permalink to this definition">¶</a></dt>
+<dt id="pinch.plots.stream_matching">
+<code class="sig-prename descclassname">pinch.plots.</code><code class="sig-name descname">stream_matching</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pinch.plots.stream_matching" title="Permalink to this definition">¶</a></dt>
 <dd><p>Steam matching diagram
 I am still unsure how to create this diagram, so this is a pure stub with no parameters.</p>
 <dl class="field-list simple">
@@ -244,8 +250,10 @@ I am still unsure how to create this diagram, so this is a pure stub with no par
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="intake.html" class="btn btn-neutral float-right" title="intake" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="README.html" class="btn btn-neutral float-left" title="pinch-analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Pinch Analysis’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

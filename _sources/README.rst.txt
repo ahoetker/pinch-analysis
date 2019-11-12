@@ -19,7 +19,8 @@ In this stage of development, the only target is a run script. Run
 Testing
 -------
 
-No unit tests are currently written.
+Unit tests are provided in the ``tests`` directory. Running tests
+requires the ``pytest`` package.
 
 Authors
 -------
